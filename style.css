@@ -25,6 +25,7 @@ a{
     background-position:top center;
     position:relative;
     z-index: 1;
+    /* display:none; */
 }
 #hero::after{
     content:"";
@@ -101,7 +102,95 @@ transition-property: background-color, color;
     background-color:crimson;
 }
 /* End Hero Section*/
+/* Services Section*/
+#services .services{
+    flex-direction:column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+padding:100px 0;
+}
+#services .section-title{
+    font-size:4rem;
+    color:black;
+    font-weight: 300;
+    text-transform:uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1rem;
+}
+#services p{
+    font-size:1.5rem;
+    font-weight: 300;
+    margin: 10px 10px;
+    text-align: center;
+    line-height: 2rem;
+       }
+#services .service-bottom{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; */
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+    flex:1 1 25%;
+}
+#services .service-item{
+    /* background-image:url(./img/img-1.png);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    padding:30px;
+    margin:10px 5%;
+    flex-basis: 80%;
+    border-radius: 10px;
+    position:relative;
+    z-index: 1;
+    overflow: hidden; */
+    flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/img-1.png);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#services .service-item::after{
+    background-color: black;
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    position:absolute;
+    content:'';
+    opacity: 0.3;
+    z-index: -1;
+}
+#services .service-bottom .service-item .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#services .service-bottom .service-item .icon img{
+    height: 100%;
+    width: 100%;
 
+}
+#services .section-title span{
+    color:red;
+}
+
+/* EndServices Section*/
 
 /* Keyframe */
 @keyframes text_reveal_box {
@@ -113,3 +202,13 @@ transition-property: background-color, color;
     100%{color:white}
 }
 /* End Keyframe */
+
+/* Media Query for desktop */
+@media only screen and (min-width:1200px)
+{
+    #services .service-bottom .service-item{
+        flex-basis:21%;
+        margin:1.5%;
+    }
+}
+/* Media Query for desktop */
